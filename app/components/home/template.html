@@ -1,0 +1,24 @@
+<!-- <div>Test</div> -->
+<div ng-cloak="" class="virtualRepeatdemoHorizontalUsage" ng-app="MyApp">
+  <md-content layout="column">
+    <p>
+       Display 1000 item in a virtual-list with viewport of only 16 columns (width=50px).
+       <br><br>
+       This demo shows scroll and rendering performance gains when using <code>md-virtual-repeat</code>;
+       achieved with the dynamic reuse of rows visible in the viewport area. Developers are required to
+       explicitly use <code>md-virtual-repeat-container</code> as a wrapping parent container.
+    </p>
+
+    <md-virtual-repeat-container id="horizontal-container" md-orient-horizontal="">
+      <div md-virtual-repeat="movie in movies" class="repeated-item" flex="">
+				<img src="{{ movie }}" class="img-responsive">
+      </div>
+    </md-virtual-repeat-container>
+  </md-content>
+
+</div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.
+-->
